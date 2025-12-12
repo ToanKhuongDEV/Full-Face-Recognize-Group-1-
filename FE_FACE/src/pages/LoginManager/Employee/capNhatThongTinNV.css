@@ -1,0 +1,241 @@
+/* --- CÀI ĐẶT TỔNG THỂ & NỀN TRANG WEB --- */
+body,
+html {
+  min-height: 100vh; /* Đảm bảo body cao full màn hình */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  /* Các thuộc tính background của bạn ở đây */
+  background-image: url("../../../assets/lg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.employee-manager-container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 2rem auto;
+  /* Đã xóa font-family và background-* vì chúng đã được chuyển ra thẻ <body> 
+  */
+}
+
+h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+/* --- THIẾT KẾ CARD (THẺ) --- */
+.form-card,
+.list-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+/* --- FORM LAYOUT (CSS GRID) --- */
+.employee-form {
+  display: grid;
+  /* Tự động tạo các cột:
+    - Mỗi cột có chiều rộng tối thiểu 300px.
+    - Tự động lấp đầy không gian (1fr).
+    - Tự động xuống hàng nếu không đủ chỗ.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem 1.5rem; /* 1rem (dọc), 1.5rem (ngang) */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nhóm input ảnh chiếm toàn bộ chiều rộng */
+.form-group-full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box; /* Quan trọng để padding không làm vỡ layout */
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-size: 1rem;
+}
+
+/* Input file custom nhẹ */
+.form-group input[type="file"] {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.form-group input[type="file"]::file-selector-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #e9ecef;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.form-group input[type="file"]::file-selector-button:hover {
+  background-color: #dee2e6;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* --- HỆ THỐNG NÚT BẤM (BUTTON) --- */
+.button-group {
+  grid-column: 1 / -1; /* Nút bấm luôn chiếm trọn 1 hàng */
+  display: flex;
+  justify-content: flex-end; /* Đẩy nút về bên phải */
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  color: #212529;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+.back-button-container {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* --- BẢNG DỮ LIỆU (TABLE) --- */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* Cho phép cuộn ngang trên di động */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap; /* Giữ cho nội dung bảng trên 1 hàng */
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.employee-table th {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.employee-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.employee-table tbody tr:hover {
+  background-color: #f1f7ff;
+}
+
+.employee-table .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .form-card,
+  .list-card {
+    padding: 1rem;
+  }
+
+  /* Trên di động, grid sẽ tự vỡ thành 1 cột
+    nhờ 'auto-fit' và 'minmax(300px, 1fr)'
+    nhưng chúng ta có thể ép nó 1 cột nếu muốn:
+  .employee-form {
+    grid-template-columns: 1fr;
+  }
+  */
+
+  .button-group {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+  }
+
+  .employee-table .actions {
+    flex-direction: column;
+  }
+}

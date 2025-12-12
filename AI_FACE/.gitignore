@@ -1,0 +1,19 @@
+# --- Python Bytecode (File biên dịch, sinh ra tự động) ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Cấu hình môi trường & Bảo mật (QUAN TRỌNG) ---
+.venv
+venv/
+env/
+
+# --- Cấu hình IDE/Editor (Không nên đưa lên Git) ---
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- File hệ thống ---
+.DS_Store
+Thumbs.db

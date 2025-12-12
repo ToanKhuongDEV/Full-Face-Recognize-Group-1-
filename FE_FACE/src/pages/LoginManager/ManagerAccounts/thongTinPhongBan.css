@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.backgroud {
+  background-image: url("../../../assets/lg.jpg");
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.box {
+  background-color: azure;
+  width: 1000px;
+  height: 600px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 50px black;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dept-table {
+  margin: 20px auto;
+  width: 90%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #fefefe;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dept-table th,
+.dept-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.dept-table th {
+  background-color: #009688;
+  color: white;
+  font-weight: bold;
+}
+
+.dept-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.dept-table tr:hover {
+  background-color: #e0f7fa;
+}
+
+.button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  transition: 0.2s;
+}
+
+.button button:hover {
+  background-color: #0056b3;
+}

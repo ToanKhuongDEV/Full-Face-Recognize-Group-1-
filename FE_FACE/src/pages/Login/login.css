@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login {
+    height: 100vh;
+    background-image: url("../../assets/lg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-backgroud {
+    margin-left: 650px;
+    width: 33%;
+    height: 80%;
+    background-color: rgb(255, 255, 255, 0);
+    border-radius: 20px;
+}
+
+.title-login {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    font-size: 55px;
+    margin-bottom: 80px;
+    margin-left: 12px;
+    margin-right: 12px;
+    border-bottom: 3px solid white;
+    border-radius: 1px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.input-acc,
+.input-pass {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+.input-acc input,
+.input-pass input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    border-bottom: 2px solid white;
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.input-acc input::placeholder,
+.input-pass input::placeholder {
+    color: rgb(164, 161, 161);
+    font-size: 20px;
+}
+
+.button {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.button-login button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-login button:hover {
+    background-color: #77c9ef;
+    color: white;
+    transform: scale(1.1);
+}
+
+.button-signUp button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button-signUp button:hover {
+    background-color: #77c9ef;
+    color: white;
+    transform: scale(1.1);
+}
+
+.or {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.or p {
+    background-color: #77c9ef63;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+.face-goo {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.face-goo button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.face a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.google a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.face button {
+    background-color: #77c9ef;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.google button {
+    background-color: #e9b3ae;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.face button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.google button:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.face {
+    color: #2176FF;
+}
+
+.google {
+    color: #DB4437;
+}
+
+.back{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.back button{
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: #62dffe2f;
+    color: #DB4437;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}

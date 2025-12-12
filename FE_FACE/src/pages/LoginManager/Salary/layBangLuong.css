@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background {
+  background-image: url("../../../assets/lg.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.93);
+  width: 700px;
+  min-height: 500px;
+  border-radius: 20px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  animation: fadeIn 0.8s ease;
+}
+
+.box h2 {
+  text-align: center;
+  color: #00695c;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #004d40;
+}
+
+.form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+.form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #00695c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background-color: #00897b;
+}
+
+.message {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.result {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #f1f8e9;
+  border-radius: 10px;
+  border: 1px solid #c8e6c9;
+}
+
+.result h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.result pre {
+  font-size: 14px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

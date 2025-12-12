@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.backgroud {
+	background-image: url("../../../assets/lg.jpg");
+	height: 100vh;
+	object-fit: cover;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+.box {
+	background-color: #f0ffff;
+	width: 1000px;
+	height: 600px;
+	border-radius: 20px;
+	box-shadow: 2px 2px 50px black;
+	padding: 20px;
+	overflow-y: auto;
+}
+
+.title {
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #333;
+}
+
+.error {
+	color: red;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.employee-table {
+	margin: 0 auto;
+	width: 95%;
+	border-collapse: collapse;
+	text-align: center;
+	background-color: #fff;
+}
+
+.employee-table th,
+.employee-table td {
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+
+.employee-table th {
+	background-color: #009688;
+	color: white;
+	font-weight: bold;
+}
+
+.employee-table tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+.employee-table tr:hover {
+	background-color: #e0f7fa;
+}
+
+.button {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.button button {
+	background-color: #007bff;
+	color: white;
+	cursor: pointer;
+	padding: 10px 20px;
+	border-radius: 20px;
+	border: none;
+	transition: 0.2s;
+}
+
+.button button:hover {
+	background-color: #0056b3;
+}
