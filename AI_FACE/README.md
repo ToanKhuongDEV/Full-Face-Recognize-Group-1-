@@ -21,28 +21,6 @@ Gợi ý cài thêm (tùy lựa chọn, cải thiện hiệu năng):
 
 Lưu ý: `face_recognition` yêu cầu `dlib` — nếu gặp lỗi khi pip install, dùng hướng dẫn platform-specific (ví dụ cài build tools, cmake, hoặc dùng conda).
 
-## Cấu hình MongoDB
-
-Tạo file `.env` trong `app/` (ví dụ đã có sẵn) với:
-
-```
-MONGO_URI=mongodb://localhost:27017
-MONGO_DB=face_recognition
-MONGO_COLL=encodings
-```
-
-`db.py` đọc các biến này để kết nối.
-
-## Encode và lưu vectors vào MongoDB
-
-Ví dụ: encode dataset và push vectors vào MongoDB:
-
-```bash
-python encode_faces.py --dataset dataset --use-mongo --mongo-uri mongodb://localhost:27017 --mongo-db face_recognition --mongo-coll encodings
-```
-
-Nếu muốn xuất luôn `encodings.pickle` (tương thích script cũ):
-
 ```bash
 python encode_faces.py --dataset dataset --use-mongo --encodings encodings.pickle
 ```
